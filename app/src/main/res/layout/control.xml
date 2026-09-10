@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo">
+
+    <!-- La vista ya no cabe de una vez (alimento + aspersion + acciones), asi
+         que el contenido va dentro de un ScrollView. El relleno inferior deja
+         el PARO por encima de la barra de gestos. -->
+    <include
+        android:id="@+id/panelEstado"
+        layout="@layout/panel_estado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollControl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/panelEstado">
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="120dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="CONTROL DE ALIMENTADORA"
+                android:textAlignment="center"
+                android:textColor="@color/letras"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/TituloSeccion"
+                android:layout_marginTop="32dp"
+                android:text="@string/tituloCantidad" />
+
+            <RadioGroup
+                android:id="@+id/opciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbAlimento2_5"
+                    style="@style/OpcionRadio"
+                    android:text="@string/alimento2_5" />
+
+                <RadioButton
+                    android:id="@+id/rbAlimento4_5"
+                    style="@style/OpcionRadio"
+                    android:text="@string/alimento4_5" />
+
+                <RadioButton
+                    android:id="@+id/rbAlimento5_5"
+                    style="@style/OpcionRadio"
+                    android:text="@string/alimento5_5" />
+
+                <RadioButton
+                    android:id="@+id/rbAlimento6"
+                    style="@style/OpcionRadio"
+                    android:text="@string/alimento6" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editTextOtro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="@string/otroValorHint"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingLeft="20dp"
+                android:textColor="@color/texto_principal"
+                android:textColorHint="@color/grafico_texto_tenue" />
+
+            <TextView
+                android:id="@+id/textViewAspersion"
+                style="@style/TituloSeccion"
+                android:layout_marginTop="32dp"
+                android:text="@string/tituloAspersion" />
+
+            <RadioGroup
+                android:id="@+id/opcionesAspersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbAspersion5"
+                    style="@style/OpcionRadio"
+                    android:text="@string/aspersion5" />
+
+                <RadioButton
+                    android:id="@+id/rbAspersion10"
+                    style="@style/OpcionRadio"
+                    android:text="@string/aspersion10" />
+
+                <RadioButton
+                    android:id="@+id/rbAspersion13"
+                    style="@style/OpcionRadio"
+                    android:text="@string/aspersion13" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnMotores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="#00B600"
+                android:text="Encender"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:rippleColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnParo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="#E60000"
+                android:text="PARO"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:iconTint="@color/logo"
+                app:rippleColor="@color/logo"
+                app:strokeColor="@color/logo" />
+
+            <!-- Va debajo del PARO y en otro color a proposito: no actua sobre
+                 el equipo, solo abre otra vista. Verde y rojo quedan reservados
+                 para las dos ordenes que si mueven la maquina. -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="50dp"
+                android:background="@color/grafico_eje" />
+
+            <Button
+                android:id="@+id/btnProgramarCiclos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/letras"
+                android:text="@string/btnProgramarCiclos"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Tarjeta del panel de estado. Lleva fondo propio porque el panel flota sobre
+    el contenido en las vistas con scroll: sin el, las lineas de texto pasarian
+    por detras de los rotulos de los pilotos.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/panel_estado_fondo" />
+    <stroke
+        android:width="1dp"
+        android:color="@color/panel_estado_borde" />
+    <corners android:radius="10dp" />
+</shape>

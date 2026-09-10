@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+        La app no tiene tema oscuro: todos los layouts fijan a mano la superficie
+        clara (@color/fondo). Con el padre DayNight, un dispositivo en modo
+        oscuro repintaba el texto de blanco sobre ese fondo rosa y los controles
+        quedaban practicamente invisibles (el caso reportado de las opciones de
+        cantidad de alimento).
+
+        Anclando la variante -night al tema Light se fuerza el mismo aspecto en
+        ambos modos, que es lo que los layouts ya asumen.
+    -->
+    <style name="Base.Theme.App_Alimentador" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/texto_principal</item>
+        <item name="android:textColorSecondary">@color/texto_principal</item>
+    </style>
+</resources>

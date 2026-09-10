@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!-- Los layouts fijan la superficie clara a mano, asi que el tema se ancla a
+         Light en ambos modos (ver values-night/themes.xml) y la tinta del texto
+         se declara explicita para no depender de la capa del fabricante. -->
+    <style name="Base.Theme.App_Alimentador" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/texto_principal</item>
+        <item name="android:textColorSecondary">@color/texto_principal</item>
+    </style>
+
+    <style name="Theme.App_Alimentador" parent="Base.Theme.App_Alimentador" />
+</resources>

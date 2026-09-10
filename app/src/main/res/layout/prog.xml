@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo">
+
+    <include
+        android:id="@+id/panelEstado"
+        layout="@layout/panel_estado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Como en control: el contenido va en un ScrollView para que los campos
+         sigan alcanzables con el teclado abierto, y el relleno inferior deja el
+         boton por encima de la barra de gestos. -->
+    <ScrollView
+        android:id="@+id/scrollProg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/panelEstado">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="120dp">
+
+            <TextView
+                android:id="@+id/tituloProg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/tituloProgramacion"
+                android:textAlignment="center"
+                android:textColor="@color/letras"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/avisoProg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/avisoMaqueta"
+                android:textAlignment="center"
+                android:textColor="@color/grafico_texto_tenue"
+                android:textSize="13sp" />
+
+            <TextView
+                style="@style/TituloSeccion"
+                android:layout_marginTop="32dp"
+                android:text="@string/progCantidad" />
+
+            <EditText
+                android:id="@+id/editProgCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="@string/progCantidadHint"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingLeft="20dp"
+                android:textColor="@color/texto_principal"
+                android:textColorHint="@color/grafico_texto_tenue" />
+
+            <TextView
+                style="@style/TituloSeccion"
+                android:layout_marginTop="28dp"
+                android:text="@string/progIntervalo" />
+
+            <EditText
+                android:id="@+id/editProgIntervalo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="@string/progIntervaloHint"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingLeft="20dp"
+                android:textColor="@color/texto_principal"
+                android:textColorHint="@color/grafico_texto_tenue" />
+
+            <TextView
+                style="@style/TituloSeccion"
+                android:layout_marginTop="28dp"
+                android:text="@string/progInicio" />
+
+            <EditText
+                android:id="@+id/editProgInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="@string/progInicioHint"
+                android:importantForAutofill="no"
+                android:inputType="time"
+                android:paddingLeft="20dp"
+                android:textColor="@color/texto_principal"
+                android:textColorHint="@color/grafico_texto_tenue" />
+
+            <Button
+                android:id="@+id/btnProgramar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/logo"
+                android:minHeight="70dp"
+                android:text="@string/programar"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

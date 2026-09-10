@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Opcion de un RadioGroup sobre la superficie rosada.
+         El color de texto y el del propio circulo van explicitos: dejarlos al
+         tema era lo que hacia que las opciones se vieran casi transparentes en
+         los dispositivos con modo oscuro activado. -->
+    <style name="OpcionRadio">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/texto_principal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:buttonTint">@color/letras</item>
+    </style>
+
+    <!-- Rotulo que encabeza cada bloque de opciones. -->
+    <style name="TituloSeccion">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/texto_principal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+
+</resources>

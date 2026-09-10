@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Panel de estado del equipo, incrustado con <include> en todas las vistas
+    menos la de inicio de sesion.
+
+    En fila y no en columna: ocupa una franja de una sola linea en lugar de un
+    bloque de tres, asi que le quita mucho menos alto al contenido de debajo.
+    Los tres pilotos se reparten el ancho a partes iguales (weight=1) para que
+    queden alineados aunque los rotulos midan distinto.
+
+    MAQUETA: los tres pilotos son fijos. "Operación normal" siempre encendido y
+    los otros dos siempre apagados; ningun codigo los toca. Cuando el estado sea
+    real, basta con dar un id a cada piloto y cambiarles el backgroundTint.
+
+    El estado no se codifica solo por color: cada piloto lleva su rotulo al lado,
+    que es lo que de verdad lo identifica.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/panel_estado_fondo"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingLeft="6dp"
+    android:paddingTop="7dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="7dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:background="@drawable/piloto"
+            android:backgroundTint="@color/piloto_verde_on" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            android:text="@string/estadoNormal"
+            android:textColor="@color/grafico_texto"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:background="@drawable/piloto"
+            android:backgroundTint="@color/piloto_amarillo_off" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            android:text="@string/estadoComunicacion"
+            android:textColor="@color/grafico_texto_tenue"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:background="@drawable/piloto"
+            android:backgroundTint="@color/piloto_rojo_off" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            android:text="@string/estadoHardware"
+            android:textColor="@color/grafico_texto_tenue"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+</LinearLayout>

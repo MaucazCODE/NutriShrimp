@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fondo">#FFEDED</color>
+    <color name="letras">#428ce2</color>
+    <color name="logo">#ff4b4b</color>
+    <!-- Realimentacion tactil del mando direccional. -->
+    <color name="logo_presionado">#c93a3a</color>
+
+    <!-- Tinta sobre la superficie rosada (@color/fondo). Se declara explicita
+         porque los layouts fijan el fondo claro a mano: si el texto se dejara
+         al tema, en un dispositivo con modo oscuro saldria casi blanco sobre
+         rosa y quedaria ilegible. -->
+    <color name="texto_principal">#1A1A1A</color>
+
+    <!-- Anclas del degradado de temperatura de la lectura en vivo:
+         frio (<=20 C) -> templado (27.5 C) -> caliente (>=35 C). -->
+    <color name="temp_frio">#4FC3F7</color>
+    <color name="temp_templado">#2E9E5B</color>
+    <color name="temp_caliente">#E53935</color>
+    <color name="temp_sin_dato">#BDBDBD</color>
+
+    <!-- Paleta categorica del historico: una ranura por parametro, en orden fijo.
+         Validada contra la superficie #FFEDED (fondo) para separacion CVD. -->
+    <color name="serie_temperatura">#2a78d6</color>
+    <color name="serie_sonido">#eb6834</color>
+    <color name="serie_ph">#1baf7a</color>
+
+    <!-- Cuarta ranura de la misma paleta, para el registro de alimentacion.
+         Morado: es el hueco que quedaba libre entre azul, naranja y verde. -->
+    <color name="serie_alimento">#8256c4</color>
+
+    <!-- Cromo del grafico: rejilla y ejes recesivos, texto en tinta neutra. -->
+    <color name="grafico_rejilla">#e1e0d9</color>
+    <color name="grafico_eje">#c3c2b7</color>
+    <color name="grafico_texto_tenue">#898781</color>
+    <color name="grafico_texto">#0b0b0b</color>
+
+    <!-- Pilotos del panel de estado. Los apagados no son grises neutros sino la
+         version desaturada y oscura de su propio color: asi un piloto apagado
+         sigue diciendo cual es, como en un tablero real. -->
+    <color name="piloto_verde_on">#1FA855</color>
+    <color name="piloto_amarillo_on">#E8B319</color>
+    <color name="piloto_rojo_on">#D93A3A</color>
+    <color name="piloto_amarillo_off">#8A8067</color>
+    <color name="piloto_rojo_off">#8A6C6C</color>
+    <color name="piloto_borde">#40000000</color>
+
+    <!-- Tarjeta que agrupa los pilotos, un escalon por encima de @color/fondo. -->
+    <color name="panel_estado_fondo">#FFF9F9</color>
+    <color name="panel_estado_borde">#22000000</color>
+</resources>

@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">App_Alimentador</string>
+    <string name="cred">Ingrese sus credenciales:</string>
+    <string name="usuario">Usuario:</string>
+    <string name="pass">Contraseña:</string>
+    <string name="inicio_sesion">Iniciar Sesión</string>
+    <string name="encabezado_monitoreo">ESTADO DE LOS PARÁMETROS</string>
+    <string name="opciones">Escoja una opción:</string>
+    <string name="control">Control</string>
+    <string name="monitoreo">Monitoreo</string>
+    <string name="tituloControl">Control de alimentadora</string>
+    <string name="cantidad">Ingrese la cantidad de alimento (KG):</string>
+    <string name="temperatura">Temperatura:</string>
+    <string name="Encender"></string>
+    <string name="Paro">Paro</string>
+    <string name="CrearUsuario">Creación de Usuario</string>
+    <string name="IngreseNombre">Ingrese su usuario:</string>
+    <string name="IngreseContraseña">Ingrese su contraseña:</string>
+    <string name="mail">Ingrese su mail:</string>
+
+    <!-- Control de alimentacion: los rotulos van en kilogramos porque es lo que
+         entiende el usuario; a Firebase se escriben gramos. -->
+    <string name="tituloCantidad">Seleccione una cantidad de comida:</string>
+    <string name="alimento2_5">2.5 kg</string>
+    <string name="alimento4_5">4.5 kg</string>
+    <string name="alimento5_5">5.5 kg</string>
+    <string name="alimento6">6 kg</string>
+    <string name="otroValorHint">Otra cantidad (kg)</string>
+
+    <!-- Aspersion: el usuario elige metros, el nodo /aspersor guarda el nivel 0-10. -->
+    <string name="tituloAspersion">Seleccione el alcance de aspersión:</string>
+    <string name="aspersion5">5 metros</string>
+    <string name="aspersion10">10 metros</string>
+    <string name="aspersion13">13 metros</string>
+
+    <!-- Registro de alimentacion: bitacora de la sesion, se vacia al entrar. -->
+    <string name="tituloRegistroAlimentacion">Alimento dispensado</string>
+    <string name="subtituloRegistroAlimentacion">Descargas en las últimas 24 h</string>
+    <string name="totalDispensado">Total dispensado: %1$s kg</string>
+
+    <!-- Programacion de ciclos (maqueta: no escribe nada en Firebase). -->
+    <string name="btnProgramarCiclos">Programar ciclos</string>
+    <string name="tituloProgramacion">PROGRAMACIÓN DE CICLOS</string>
+    <string name="avisoMaqueta">Vista de demostración: no envía nada al equipo.</string>
+    <string name="progCantidad">Cantidad de alimento (kg):</string>
+    <string name="progCantidadHint">Ej. 4.5</string>
+    <string name="progIntervalo">Tiempo entre ciclos (horas):</string>
+    <string name="progIntervaloHint">Ej. 8</string>
+    <string name="progInicio">Hora de inicio:</string>
+    <string name="progInicioHint">HH:MM</string>
+    <string name="programar">Programar</string>
+    <string name="cicloProgramado">Ciclo de alimentación programado</string>
+
+    <!-- Panel de estado (maqueta: el verde siempre encendido, los otros no). -->
+    <string name="estadoNormal">Operación normal</string>
+    <string name="estadoComunicacion">Error de comunicación</string>
+    <string name="estadoHardware">Error de hardware</string>
+
+</resources>
