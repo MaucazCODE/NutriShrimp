@@ -1,6 +1,6 @@
 # 🦐 NutriShrimp
 
-Aplicación Android para el control y monitoreo remoto de un **alimentador automático de camarón**, conectada al equipo por **Firebase Realtime Database**. Proyecto de la asignatura de Sistemas Embebidos.
+Aplicación Android para el control y monitoreo remoto de un **alimentador automático de camarón**, conectada al equipo por **Firebase Realtime Database**. Proyecto de titulación — **ESPOL**.
 
 ---
 
