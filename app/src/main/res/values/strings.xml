@@ -51,6 +51,23 @@
     <string name="programar">Programar</string>
     <string name="cicloProgramado">Ciclo de alimentación programado</string>
 
+    <string name="mapa_gps">Mapa GPS</string>
+    <string name="titulo_mapa_gps">Ruta automática</string>
+    <string name="instruccion_mapa_gps">Toca el mapa para agregar puntos a la ruta.</string>
+    <string name="actual_sin_dato">Actual: esperando coordenadas de Firebase…</string>
+    <string name="actual_coordenada">Actual: %1$s, %2$s</string>
+    <string name="limpiar_ruta">Limpiar puntos</string>
+    <string name="activar_automatico">Enviar ruta y activar modo automático</string>
+    <string name="ruta_vacia">Agrega al menos un punto antes de activar el modo automático.</string>
+    <string name="ruta_enviada">Ruta enviada y modo automático activado.</string>
+    <string name="ruta_limpiada">Puntos de la ruta eliminados.</string>
+    <string name="coordenada_invalida">Firebase publicó una coordenada no válida en «actual».</string>
+    <string name="error_cargar_actual">No se pudo leer la coordenada actual: %1$s</string>
+    <string name="error_enviar_ruta">No se pudo enviar la ruta: %1$s</string>
+    <string name="atribucion_mapa">© OpenStreetMap contributors</string>
+    <string name="punto_agregado">Punto %1$d agregado</string>
+    <string name="punto_ruta">Punto %1$d de la ruta</string>
+
     <!-- Panel de estado (maqueta: el verde siempre encendido, los otros no). -->
     <string name="estadoNormal">Operación normal</string>
     <string name="estadoComunicacion">Error de comunicación</string>

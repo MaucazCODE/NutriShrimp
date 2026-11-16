@@ -20,6 +20,17 @@ Lectura en vivo de los tres sensores del estanque:
 
 El muestreo del histórico corre en `HistorialMuestras` y arranca desde `AlimentadorApp` (al iniciar la app, no al abrir la vista), de modo que la pantalla de registro siempre encuentra datos ya acumulados.
 
+### 🗺️ Mapa GPS y ruta automática
+
+La pantalla **Mapa GPS** usa OpenStreetMap. Toca el mapa para añadir puntos, consultar el marcador `actual` en tiempo real y, al activar el modo automático, enviar en una sola actualización de Firebase:
+
+```text
+ruta: [{ latitud: <number>, longitud: <number> }, ...]
+automatico: true
+```
+
+La ubicación actual se lee desde `actual` con el formato `{ latitud: <number>, longitud: <number> }`. Se requiere conexión a Internet para cargar los mosaicos del mapa.
+
 ### 🎮 Control
 
 Dos ramas, separadas por `opcControlActivity`:
@@ -61,6 +72,7 @@ MainActivity (login)
    ├── crearUsuarioActivity
    └── opcionesActivity
          ├── monitoreoActivity ......... sensores en vivo + registroActivity
+         ├── mapaGpsActivity ........... ruta GPS + modo automático
          └── opcControlActivity
                ├── controlActivity ..... alimentación, PWM, aspersor
                └── controlNavActivity .. mando direccional + PARO
@@ -76,6 +88,7 @@ app/src/main/java/com/example/app_alimentador/
 ├── MainActivity.java ........... Login
 ├── crearUsuarioActivity.java ... Alta de usuario
 ├── opcionesActivity.java ....... Monitoreo o control
+├── mapaGpsActivity.java ........ Ruta GPS y coordenada actual en vivo
 ├── monitoreoActivity.java ...... Sensores en vivo
 ├── registroActivity.java ....... Histórico y gráficas
 ├── opcControlActivity.java ..... Alimentación o navegación

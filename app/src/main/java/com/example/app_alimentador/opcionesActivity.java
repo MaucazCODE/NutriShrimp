@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class opcionesActivity extends AppCompatActivity {
 
-    private Button btnMonitoreo, btnControl;
+    private Button btnMonitoreo, btnControl, btnMapaGps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class opcionesActivity extends AppCompatActivity {
 
         btnMonitoreo = findViewById(R.id.btnMonitoreo);
         btnControl = findViewById(R.id.btnControl);
+        btnMapaGps = findViewById(R.id.btnMapaGps);
 
         btnMonitoreo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +38,8 @@ public class opcionesActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        btnMapaGps.setOnClickListener(v ->
+                startActivity(new Intent(opcionesActivity.this, mapaGpsActivity.class)));
     }
 }
 
